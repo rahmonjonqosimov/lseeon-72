@@ -56,6 +56,12 @@
         background-size: 200%;
         animation: skeletonAnime 1s linear 0s infinite;
       }
+
+      @keyframes skeletonAnime {
+        to {
+          background-position: 200%;
+        }
+      }
     }
   }
   @media screen and (max-width: 600px) {
@@ -116,6 +122,7 @@
           background-size: 200%;
           animation: skeletonAnime 1s linear 0s infinite;
         }
+
         @keyframes skeletonAnime {
           to {
             background-position: 200%;
