@@ -38,21 +38,21 @@ const TopHeader = () => {
         </div>
         <ul className="nav__link">
           <li>
-            <Link>
+            <Link onClick={scrollTop} to={"/compare"}>
               <img src={compare} alt="" />
               <p className="count">3</p>
               <span>Compare</span>
             </Link>
           </li>
           <li>
-            <Link>
+            <Link onClick={scrollTop} to={"wishlist"}>
               <IoMdHeartEmpty />
               <p className="count">6</p>
               <span>Wishlist</span>
             </Link>
           </li>
           <li>
-            <Link>
+            <Link onClick={scrollTop} to={"cart"}>
               <IoCartOutline />
               <p className="count">2</p>
               <span>Cart</span>
