@@ -5,6 +5,7 @@ import img from "../../assets/images/admin.png";
 import Stay from "../../components/stay/Stay";
 import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
+import { FaAngleRight } from "react-icons/fa6";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -58,7 +59,7 @@ const Admin = () => {
           <ul>
             <li>
               <Link to={"/"}>
-                <AiOutlineHome /> Home >
+                <AiOutlineHome /> Home <FaAngleRight />
               </Link>
             </li>
             <li>Admin</li>

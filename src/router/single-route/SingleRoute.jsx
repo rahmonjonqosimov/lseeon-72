@@ -18,6 +18,8 @@ import { FaStar } from "react-icons/fa";
 import { CiFilter } from "react-icons/ci";
 import { AiOutlineHome } from "react-icons/ai";
 import SingleRouteLoading from "../../components/loading/SingleRouteLoading";
+import { FaAngleRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const SingleRoute = () => {
   let [count, setCount] = useState(1);
@@ -26,13 +28,18 @@ const SingleRoute = () => {
   let { data, loading } = useFetch(`/products/${id}`);
   console.log(data);
   return (
-    <section className="single__route">
+    <motion.section
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+      className="single__route"
+    >
       <div className="navigate">
         <div className="container">
           <ul>
             <li>
               <Link to={"/"}>
-                <AiOutlineHome /> Home >
+                <AiOutlineHome /> Home <FaAngleRight />
               </Link>
             </li>
             <li>Login</li>
@@ -329,7 +336,7 @@ const SingleRoute = () => {
         </div>
       </div>
       <Stay />
-    </section>
+    </motion.section>
   );
 };
 

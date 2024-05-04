@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import card1 from "../../assets/images/banner-1.svg";
 import card2 from "../../assets/images/banner-2.svg";
 import card3 from "../../assets/images/banner-3.svg";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import logo from "../../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
@@ -7,24 +7,13 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import compare from "../../../assets/images/compare.svg";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
-import { useFetch } from "../../../hooks/useFetch";
-import axios from "axios";
 
 const TopHeader = () => {
-  let [search, setSearch] = useState("");
-  useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products?sort=mens")
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }, [search]);
-  // let { data } = useFetch(`/products?sort=love`, search);
-  // console.log(data);
   const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <section className="top__header">
       <div className="container top__header__content">
-        <Link to={"/"}>
+        <Link onClick={() => scrollTop()} to={"/"}>
           <img className="nav__logo" src={logo} alt="Logo" />
         </Link>
         <form className="search__form">
@@ -33,16 +22,11 @@ const TopHeader = () => {
             <option value="moto"> Moto </option>
             <option value="bag"> Bag</option>
           </select>
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search for items..."
-            type="text"
-          />
+          <input placeholder="Search for items..." type="text" />
           <button>
             <FiSearch />
           </button>
-          <div className={`search ${search.trim() ? "" : "none"}`}></div>
+          <div className={`search`}></div>
         </form>
         <div className="location">
           <SlLocationPin />

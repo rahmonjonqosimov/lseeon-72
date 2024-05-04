@@ -5,6 +5,8 @@ import axios from "../../api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { FaAngleRight } from "react-icons/fa";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -32,13 +34,18 @@ const Login = () => {
       .finally(() => setLoading(false));
   };
   return (
-    <section className="login">
+    <motion.section
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+      className="login"
+    >
       <div className="navigate">
         <div className="container">
           <ul>
             <li>
               <Link to={"/"}>
-                <AiOutlineHome /> Home >
+                <AiOutlineHome /> Home <FaAngleRight />
               </Link>
             </li>
             <li>Login</li>
@@ -92,7 +99,7 @@ const Login = () => {
         </div>
       </div>
       {/* <ToastContainer /> */}
-    </section>
+    </motion.section>
   );
 };
 
