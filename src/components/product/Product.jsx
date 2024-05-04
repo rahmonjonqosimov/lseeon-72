@@ -3,6 +3,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { BsCart3 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Loading from "../loading/Loading";
+import { FaStar } from "react-icons/fa";
 
 const Product = () => {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -32,7 +33,17 @@ const Product = () => {
       <div className="text">
         <h6>{el.category}</h6>
         <h4 title={el.title}>{el.title}</h4>
-        <h5>({el.rating.rate})</h5>
+        <div className="stars">
+          {Array(Math.round(el.rating.rate))
+            .fill("")
+            .map((_, inx) => (
+              <div key={inx} className="star">
+                <FaStar />
+              </div>
+            ))}
+          ({el.rating.rate})
+        </div>
+
         <h5> Number of products {el.rating.count}</h5>
         <div className="cart">
           <span>

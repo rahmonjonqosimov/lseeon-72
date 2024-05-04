@@ -396,6 +396,17 @@
           color: #adadad;
           margin-bottom: 9px;
         }
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          margin-top: 4px;
+        }
+        .star {
+          svg {
+            color: #fe7300;
+          }
+        }
         h4 {
           font-family: Quicksand;
           font-size: 16px;
