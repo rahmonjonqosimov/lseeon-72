@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { FaAngleRight } from "react-icons/fa";
 
 const Login = () => {
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   let navigate = useNavigate();
   let [check, setCheck] = useState(false);
   let [username, setUsername] = useState("johnd");
@@ -90,7 +91,7 @@ const Login = () => {
               <p>Forgot Password?</p>
             </div>
             <div className="btns">
-              <button disabled={loading || !check}>
+              <button onClick={() => scrollTop()} disabled={loading || !check}>
                 {loading ? "Loading..." : "Login"}
               </button>
               <Link>Signup?</Link>
