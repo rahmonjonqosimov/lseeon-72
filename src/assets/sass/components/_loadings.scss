@@ -1,0 +1,302 @@
+.loading {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    .card {
+      width: 100%;
+      height: 505px;
+      .img {
+        width: 100%;
+        height: 300px;
+        background: #ddd;
+        margin-bottom: 14px;
+        border-radius: 6px;
+      }
+      .line {
+        width: 100%;
+        height: 20px;
+        background: #ddd;
+        border-radius: 4px;
+        margin-bottom: 14px;
+      }
+      .line1 {
+        width: 80%;
+        height: 20px;
+        background: #ddd;
+        border-radius: 4px;
+        margin-bottom: 14px;
+      }
+      .line2 {
+        width: 60%;
+        height: 20px;
+        background: #ddd;
+        border-radius: 4px;
+        margin-bottom: 16px;
+      }
+      .line3 {
+        width: 40%;
+        height: 20px;
+        background: #ddd;
+        border-radius: 4px;
+      }
+      .btnss {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .button {
+        width: 83px;
+        height: 44px;
+        border-radius: 5px;
+        background: #ddd;
+      }
+      .skeleton__anime {
+        background: linear-gradient(90deg, #f7f7f7, #ddd, #f7f7f7);
+        background-size: 200%;
+        animation: skeletonAnime 1s linear 0s infinite;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      .card {
+        width: 100%;
+        height: 335px;
+        .img {
+          width: 100%;
+          height: 160px;
+          background: #ddd;
+          margin-bottom: 14px;
+          border-radius: 6px;
+        }
+        .line {
+          width: 100%;
+          height: 20px;
+          background: #ddd;
+          border-radius: 4px;
+          margin-bottom: 14px;
+        }
+        .line1 {
+          width: 80%;
+          height: 20px;
+          background: #ddd;
+          border-radius: 4px;
+          margin-bottom: 14px;
+        }
+        .line2 {
+          width: 60%;
+          height: 20px;
+          background: #ddd;
+          border-radius: 4px;
+          margin-bottom: 16px;
+        }
+        .line3 {
+          width: 40%;
+          height: 20px;
+          background: #ddd;
+          border-radius: 4px;
+        }
+        .btnss {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .button {
+          width: 60px;
+          height: 32px;
+          border-radius: 5px;
+          background: #ddd;
+        }
+        .skeleton__anime {
+          background: linear-gradient(90deg, #f7f7f7, #ddd, #f7f7f7);
+          background-size: 200%;
+          animation: skeletonAnime 1s linear 0s infinite;
+        }
+        @keyframes skeletonAnime {
+          to {
+            background-position: 200%;
+          }
+        }
+      }
+    }
+  }
+}
+.single__route__loading {
+  .single__route__content {
+    .main {
+      display: flex;
+      gap: 50px;
+      .prod {
+        display: flex;
+        flex-direction: column;
+        .product___img {
+          background: #ddd;
+          height: 460px;
+          width: 460px;
+          border-radius: 16px;
+        }
+        .images {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .im {
+            width: 100px;
+            height: 100px;
+            padding: 9px;
+            background: #ddd;
+            border-radius: 4px;
+          }
+        }
+      }
+      .about {
+        width: 466px;
+        .title {
+          width: 100%;
+          height: 48px;
+          background: #ddd;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+        .price__card {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 30px;
+          .price {
+            width: 211px;
+            height: 58px;
+            background: #ddd;
+            border-radius: 5px;
+          }
+          span {
+            .foiz {
+              width: 40px;
+              height: 12px;
+              border-radius: 2px;
+              background: #ddd;
+              margin-bottom: 6px;
+            }
+            .price__chegirma {
+              width: 76px;
+              height: 28px;
+              background: #ddd;
+              border-radius: 5px;
+            }
+          }
+        }
+        .description {
+          width: 100%;
+          height: 18px;
+          margin-bottom: 10px;
+          background: #ddd;
+          border-radius: 4px;
+        }
+        .description1 {
+          width: 80%;
+        }
+        .description2 {
+          width: 85%;
+        }
+        .description3 {
+          width: 95%;
+        }
+      }
+      .skeleton__anime {
+        background: linear-gradient(90deg, #f7f7f7, #ddd, #f7f7f7) !important;
+        background-size: 200%;
+        animation: skeletonAnimeted 1s linear 0s infinite;
+      }
+      @keyframes skeletonAnimeted {
+        to {
+          background-position: 200%;
+        }
+      }
+    }
+    @media screen and (max-width: 1400px) {
+      .main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 auto;
+      }
+    }
+    @media screen and (max-width: 1080px) {
+      .main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 auto;
+        .prod {
+          .product___img {
+            width: 100%;
+          }
+          .images {
+            justify-content: center;
+            .im {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 870px) {
+      .main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 auto;
+        .prod {
+          .product___img {
+            width: 100%;
+            height: 300px;
+          }
+          .images {
+            justify-content: center;
+            .im {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .main {
+        margin: 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 auto;
+        max-width: 500px;
+        width: 100%;
+        .about {
+          width: 100%;
+          .price__card {
+            justify-content: center;
+          }
+          .description {
+            margin: 0 auto 10px;
+          }
+        }
+        .prod {
+          .product___img {
+            width: 100%;
+            height: 300px;
+          }
+          .images {
+            justify-content: center;
+            .im {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1626px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(./assets/fonts/Quicksand-Regular.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(./assets/fonts/Lato-Regular.ttf);
+}
+body {
+  font-family: Quicksand, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  outline: none;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
